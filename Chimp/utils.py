@@ -1,6 +1,9 @@
+import time
+
 import segyio
 from bitstring import BitStream, BitArray, Bits
 import bitstring
+spacial_list=[0,5,6,7,8,9,10,11]                #用于压缩前导0的特殊值
 
 # 求先导零 leading_zero
 def leading_zero(ba):
@@ -49,3 +52,6 @@ def non_leadingzero_bit(ba):
     l_z = leading_zero(ba)
     nz_b=ba[l_z:]
     return nz_b
+
+
+

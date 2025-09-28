@@ -127,6 +127,6 @@ with segyio.open("test.segy", "r", ignore_geometry=True) as f:
 # 如果需要展开成一维列表
 b_time=time.time()
 flatten_data = [x for tr in traces for x in tr]
-test_encode(flatten_data[0:1000000])
+test_encode(flatten_data[0:1000])
 e_time=time.time()
 print(f"用时:{e_time-b_time}s")
